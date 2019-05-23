@@ -1,0 +1,53 @@
+<% include partials/header_admin %>
+
+<div class="container">
+    <form action="/search/students" method="POST" >
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Student ID" name="student[studentid]">
+        </div>
+        <button type="submit" class="btn btn-default" ><i class="fas fa-search"></i></button>
+</form>
+</div>
+
+<div class="ui main text container">
+    <div class="ui huge header">Students</div>
+    <div class="ui top  attached segment">
+        <div class="ui divided items">
+            <% student.forEach(function(student){%>
+            <div class="item">
+                <div class="content">
+                     <div class="description">
+                         <span><label>Student ID - </label> <%= student.studentid %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Name - </label> <%= student.name %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Email -  </label> <%= student.email %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Total Fine -  </label> <%= student.fine %></span>
+                     </div>
+                     <div class="extra">
+                     <a class="ui orange basic button" href="/students/<%= student._id %>/issue">Issue Book</a>
+                     </div>
+                     <div class="extra">
+                     <a class="ui orange basic button" href="/students/<%= student._id %>/return">Return Book</a>
+                     </div>
+                     <div class="extra">
+                     <a class="ui orange basic button" href="/students/<%= student._id %>/fineupdate">Update Fine</a>
+                     </div>
+                     <div class="extra">
+                     <a class="ui floated basic violet button" href="/students/<%= student._id %>">
+                         Read More
+                         <i class="right chevron icon"></i>
+                     </a>
+                     </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_admin %>

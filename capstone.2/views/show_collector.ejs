@@ -1,0 +1,28 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= collector.name %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="content">
+                <span><label>Collector ID - </label> <%= collector.collectorid %></span>
+            </div>
+            <div class="content">
+                <span><label>Name - </label> <%= collector.name %></span>
+            </div>
+            <div class="content">
+                <span><label>Email ID - </label> <%= collector.email %></span>
+            </div>
+            <div class="content">
+                <span><label>Mobile Number - </label> <%= collector.mobile %></span>
+            </div>
+            <br>
+            <a class="ui orange basic button" href="/collectors/<%= collector._id %>/edit">Edit</a>
+            <form id="delete" action="/collectors/<%= collector._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_admin %>

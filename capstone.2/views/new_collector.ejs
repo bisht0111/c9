@@ -1,0 +1,55 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+  <div class="ui huge header">New Collector</div>
+  <form class="ui form" action="/admin/collectors" method="POST">
+    <div class="field">
+      <label>Collector ID</label>
+      <input type="text" placeholder="Collector ID" name="collectorid">
+    </div>
+    <div class="field">
+      <label>Name</label>
+      <input type="text" placeholder="Name" name="name">
+    </div>
+    <div class="field">
+      <label>Email id</label>
+      <input type="email" placeholder="Email" name="email">
+    </div>
+    <div class="field">
+      <label>Mobile</label>
+      <input type="tel" placeholder="Mobile Number" name="mobile">
+    </div>
+    <div class="field">
+         <label>Gender</label>
+  <select name="gender">
+    <!-- <option value="none">Options</option> -->
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+
+    <div class="field">
+      <label>Age</label>
+      <input type="Number" placeholder="Age" name="age">
+    </div>
+    <div class="field">
+      <label>Address</label>
+      <input type="text" placeholder="Address" name="address">
+    </div>
+    <div class="field">
+      <label>Truck ID</label>
+      <input type="Number" placeholder="Truck ID" name="truckId">
+    </div>
+    <div class="field">
+      <label>Capacity</label>
+      <input type="Number" placeholder="Capacity" name="capacity">
+    </div>
+    <div class="field">
+      <label>Model</label>
+      <input type="text" placeholder="Model" name="model">
+    </div>
+    <input class="ui violet big basic button" type="submit">
+  </form>
+</div>
+
+<% include partials/footer_admin %>

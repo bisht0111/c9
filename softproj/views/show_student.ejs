@@ -1,0 +1,87 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= student.title %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="content">
+                <span><label>Student ID - </label> <%= student.studentid %></span>
+            </div>
+            <div class="content">
+                <span><label>Name - </label> <%= student.name %></span>
+            </div>
+            <div class="content">
+                <span><label>Email ID - </label> <%= student.email %></span>
+            </div>
+            <div class="content">
+                <span><label>Total Fine - </label> <%= student.fine %></span>
+            </div>
+            <div class="description">
+               <label>Issue Book</label>
+                  <ol>
+                    <li>
+                        <div class="description">
+                          <span><label>Book ID - </label> <%= student.issue[0].bookid %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Issue Date - </label> <%= student.issue[0].issuedate %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Due Date - </label> <%= student.issue[0].duedate %></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="description">
+                          <span><label>Book ID - </label> <%= student.issue[1].bookid %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Issue Date - </label> <%= student.issue[1].issuedate %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Due Date - </label> <%= student.issue[1].duedate %></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="description">
+                          <span><label>Book ID - </label> <%= student.issue[2].bookid %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Issue Date - </label> <%= student.issue[2].issuedate %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Due Date - </label> <%= student.issue[2].duedate %></span>
+                        </div>
+                    </li>
+                  </ol>
+             </div>
+             <div class="description">
+               <label>Reserve Book</label>
+                  <ol>
+                    <li>
+                        <div class="description">
+                          <span><label>Book ID - </label> <%= student.reserve[0].booksid %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Reserve Date - </label> <%= student.reserve[0].reservedate %></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="description">
+                          <span><label>Book ID - </label> <%= student.reserve[1].booksid %></span>
+                        </div>
+                        <div class="description">
+                          <span><label>Reserve Date - </label> <%= student.reserve[1].reservedate %></span>
+                        </div>
+                    </li>
+                  </ol>
+             </div>
+            <br>
+            <a class="ui orange basic button" href="/students/<%= student._id %>/edit">Edit</a>
+            <form id="delete" action="/students/<%= student._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_admin %>

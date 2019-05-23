@@ -1,0 +1,34 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+  <div class="ui huge header">New Book</div>
+  <form class="ui form" action="/admin/books" method="POST">
+    <div class="field">
+      <label>Book ID</label>
+      <input type="text" placeholder="Book ID" name="book[bookid]">
+    </div>
+    <div class="field">
+      <label>Title</label>
+      <input type="text" placeholder="Book Title" name="book[title]">
+    </div>
+    <div class="field">
+      <label>Author</label>
+      <input type="text" placeholder="Author Name" name="book[author]">
+    </div>
+    <div class="field">
+      <label>Number of copies</label>
+      <input type="text" placeholder="Number of copies" name="book[copies]">
+    </div>
+    <div class="field">
+      <label>Genre</label>
+      <input type="text" placeholder="Genre" name="book[genre]">
+    </div>
+    <div class="field">
+      <label>Description</label>
+      <textarea name="book[description]"></textarea>
+    </div>
+    <input class="ui violet big basic button" type="submit">
+  </form>
+</div>
+
+<% include partials/footer_admin %>

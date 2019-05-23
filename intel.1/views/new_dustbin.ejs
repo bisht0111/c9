@@ -1,0 +1,26 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+  <div class="ui huge header">New Dustbin</div>
+  <form class="ui form" action="/admin/dustbins" method="POST">
+    <div class="field">
+      <label>Dustbin ID</label>
+      <input type="text" placeholder="Dustbin ID" name="dustbin[dustbinid]">
+    </div>
+    <div class="field">
+      <label>Area Number</label>
+      <input type="text" placeholder="Area Number" name="dustbin[areanumber]">
+    </div>
+    <div class="field">
+      <label>Area</label>
+      <input type="text" placeholder="Area" name="dustbin[area]">
+    </div>
+    <div class="field">
+      <label>Fill Level</label>
+      <input type="text" placeholder="Fill Level" name="dustbin[fill]">
+    </div>
+    <input class="ui violet big basic button" type="submit">
+  </form>
+</div>
+
+<% include partials/footer_admin %>

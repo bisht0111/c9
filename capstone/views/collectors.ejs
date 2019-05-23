@@ -1,0 +1,35 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container">
+    <div class="ui huge header">Collectors</div>
+    <div class="ui top  attached segment">
+        <div class="ui divided items">
+            <% collector.forEach(function(collector){%>
+            <div class="item">
+                <div class="content">
+                     <div class="description">
+                         <span><label>Collector ID - </label> <%= collector.collectorid %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Name - </label> <%= collector.name %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Email -  </label> <%= collector.email %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Mobile -  </label> <%= collector.mobile %></span>
+                     </div>
+                     <div class="extra">
+                     <a class="ui floated basic violet button" href="/collectors/<%= collector._id %>">
+                         Read More
+                         <i class="right chevron icon"></i>
+                     </a>
+                     </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_admin %>

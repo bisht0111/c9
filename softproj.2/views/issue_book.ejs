@@ -1,0 +1,61 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+  <div class="ui huge header">Edit <%= student.name %> </div>
+  <form class="ui form" action="/students/<%= student._id %>?_method=PUT" method="POST">
+      <div class="field">
+        <div class="field">
+                  <label>Student ID:</label>
+                  <input type="text" value="<%= student.studentid %>" name="student[studentid]">
+                </div>
+        <label>Issue Book</label>
+          <ol>
+            <li>
+                <div class="field">
+                  <label>Book ID</label>
+                  <input type="text" value="<%= student.issue[0].bookid %>" name="student0[bookid]">
+                </div>
+                <div class="field">
+                  <label>Issue Date</label>
+                  <input type="text" value="<%= student.issue[0].issuedate %>" name="student0[issuedate]">
+                </div>
+                <div class="field">
+                  <label>Due Date</label>
+                  <input type="text" value="<%= student.issue[0].duedate %>" name="student0[duedate]">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                  <label>Book ID</label>
+                  <input type="text" value="<%= student.issue[1].bookid %>" name="student1[bookid]">
+                </div>
+                <div class="field">
+                  <label>Issue Date</label>
+                  <input type="text" value="<%= student.issue[1].issuedate %>" name="student1[issuedate]">
+                </div>
+                <div class="field">
+                  <label>Due Date</label>
+                  <input type="text" value="<%= student.issue[1].duedate %>" name="student1[duedate]">
+                </div>
+            </li>
+            <li>
+                <div class="field">
+                  <label>Book ID</label>
+                  <input type="text" value="<%= student.issue[2].bookid %>" name="student2[bookid]">
+                </div>
+                <div class="field">
+                  <label>Issue Date</label>
+                  <input type="text" value="<%= student.issue[2].issuedate %>" name="student2[issuedate]">
+                </div>
+                <div class="field">
+                  <label>Due Date</label>
+                  <input type="text" value="<%= student.issue[2].duedate %>" name="student2[duedate]">
+                </div>
+            </li>
+          </ol>
+      </div>
+      <input class="ui violet big basic button" type="submit">
+  </form>
+</div>
+
+<% include partials/footer_admin %>

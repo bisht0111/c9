@@ -1,0 +1,44 @@
+<% include partials/header_admin %>
+
+<div class="container">
+    <form action="/search/dustbins" method="POST" >
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Dustbin ID" name="dustbin[dustbinid]">
+        </div>
+        <button type="submit" class="btn btn-default" ><i class="fas fa-search"></i></button>
+</form>
+</div>
+
+<div class="ui main text container">
+    <div class="ui huge header">Dustbins</div>
+    <div class="ui top  attached segment">
+        <div class="ui divided items">
+            <% dustbin.forEach(function(dustbin){%>
+            <div class="item">
+                <div class="content">
+                     <div class="description">
+                         <span><label>Dustbin ID - </label> <%= dustbin.dustbinid %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Area Number - </label> <%= dustbin.areanumber %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Area -  </label> <%= dustbin.area %></span>
+                     </div>
+                     <div class="description">
+                         <span><label>Fill Level -  </label> <%= dustbin.fill %></span>
+                     </div>
+                     <div class="extra">
+                     <a class="ui floated basic violet button" href="/dustbins/<%= dustbin._id %>">
+                         Read More
+                         <i class="right chevron icon"></i>
+                     </a>
+                     </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_admin %>

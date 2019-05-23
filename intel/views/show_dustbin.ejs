@@ -1,0 +1,28 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= dustbin.dustbinid %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="content">
+                <span><label>Dustbin ID - </label> <%= dustbin.dustbinid %></span>
+            </div>
+            <div class="content">
+                <span><label>Area Number - </label> <%= dustbin.areanumber %></span>
+            </div>
+            <div class="content">
+                <span><label>Area - </label> <%= dustbin.area %></span>
+            </div>
+            <div class="content">
+                <span><label>Fill Level - </label> <%= dustbin.fill %></span> 
+            </div>
+            <br>
+            <a class="ui orange basic button" href="/dustbins/<%= dustbin._id %>/edit">Edit</a>
+            <form id="delete" action="/dustbins/<%= dustbin._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_admin %>

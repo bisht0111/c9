@@ -1,0 +1,26 @@
+<% include partials/header_user %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= book.title %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="content">
+                <span><label>Book ID - </label> <%= book.bookid %></span>
+            </div>
+            <div class="content">
+                <span><label>Author - </label> <%= book.author %></span>
+            </div>
+            <div class="content">
+                <span><label>Copies - </label> <%= book.copies %></span>
+            </div>
+            <div class="content">
+                <span><label>Author - </label> <%= book.genre %></span>
+            </div>
+            <div class="description">
+                <p><label>Description -  </label> <%= book.description %></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_user %>

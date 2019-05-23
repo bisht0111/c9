@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Home Page</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/stylesheets/landing.css">
+    </head>
+    <body>
+    
+    <div class="container">
+        <% if(error && error.length > 0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <% if(success && success.length > 0){ %>
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+    <div id="landing-header">
+ 		<h1>Welcome to Examination Portal!</h1>
+		<a href="/register" class="btn btn-lg btn-success">Register</a>
+		<a href="/login" class="btn btn-lg btn-success">Login</a>
+    </div>
+    
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<% include partials/footer_user %>
+
+<!-- <div class="container">
+	<div class="jumbotron">
+	  	<h1>Welcome to the Online Exam Portal</h1>
+	  	<p>Brace yourself for the Exam !!!</p>
+	  	<p><a class="btn btn-primary btn-lg" href="/exam" role="button">Start Exam</a></p>
+	</div>
+
+	<p><a class="btn btn-primary btn-lg" href="/questions/new" role="button">Add new question</a></p>
+
+	<p><a class="btn btn-primary btn-lg" href="/exam/new" role="button">Add Exam</a></p>
+	
+	<p><a class="btn btn-primary btn-lg" href="/exam" role="button">See ALL Exam</a></p>
+
+
+</div>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--    <head>-->
+<!--        <meta charset="UTF-8">-->
+<!--        <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--        <meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+<!--        <title>Home Page</title>-->
+<!--        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
+<!--        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">-->
+<!--        <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">-->
+<!--    </head>-->
+<!--    <body> -->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <h1 style="text-align: center">Student Login</h1>-->
+<!--                <div style="width: 30%; margin: 25px auto;">-->
+<!--                    <form action="/user" method="post">-->
+<!--                        <div class="form-group">-->
+<!--                            <input class="form-control" type="text" name="student.studentid" placeholder="Student ID">-->
+<!--                        </div>-->
+<!--                        <div class="form-group">-->
+<!--                            <button class="btn btn-lg btn-primary btn-block">Submit</button>-->
+<!--                        </div>-->
+<!--                    </form>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </body>-->
+<!--</html>-->

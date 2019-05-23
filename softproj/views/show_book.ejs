@@ -1,0 +1,31 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header"><%= book.title %></div>
+    <div class="ui top attached">
+        <div class="item">
+            <div class="content">
+                <span><label>Book ID - </label> <%= book.bookid %></span>
+            </div>
+            <div class="content">
+                <span><label>Author - </label> <%= book.author %></span>
+            </div>
+            <div class="content">
+                <span><label>Copies - </label> <%= book.copies %></span>
+            </div>
+            <div class="content">
+                <span><label>Author - </label> <%= book.genre %></span>
+            </div>
+            <div class="description">
+                <p><label>Description -  </label> <%= book.description %></p>
+            </div>
+            <br>
+            <a class="ui orange basic button" href="/books/<%= book._id %>/edit">Edit</a>
+            <form id="delete" action="/books/<%= book._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer_admin %>

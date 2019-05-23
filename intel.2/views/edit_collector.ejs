@@ -1,0 +1,26 @@
+<% include partials/header_admin %>
+
+<div class="ui main text container segment">
+  <div class="ui huge header">Edit <%= collector.name %> </div>
+  <form class="ui form" action="/collectors/<%= collector._id %>?_method=PUT" method="POST">
+      <div class="field">
+        <label>Collector ID</label>
+        <input type="text" value="<%= collector.collectorid %>" name="collector[collectorid]">
+      </div>
+      <div class="field">
+        <label>Name</label>
+        <input type="text" value="<%= collector.name %>" name="collector[name]">
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="text" value="<%= collector.email %>" name="collector[email]">
+      </div>
+      <div class="field">
+        <label>Mobile Number</label>
+        <input type="text" value="<%= collector.mobile %>" name="collector[mobile]">
+      </div>
+      <input class="ui violet big basic button" type="submit">
+  </form>
+</div>
+
+<% include partials/footer_admin %>
